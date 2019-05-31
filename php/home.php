@@ -1,9 +1,9 @@
-<?php
 
+<?php
 session_start();
 if (!isset($_SESSION["name"])) 
 {
-	header("location: ../login.php");
+    header("location: ../login.php");
 }
 echo "Hello " . $_SESSION['name'];
 ?>

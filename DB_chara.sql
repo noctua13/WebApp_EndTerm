@@ -1,4 +1,4 @@
-insert into Characters (Name,Element,Weapon,Rarity,Icon,Country) values
+insert into unit (Name,Element,Weapon,Rarity,Icon,Country) values
 ('Todomeki', 'Fire', 'Slash','5', 'https://vignette.wikia.nocookie.net/merc-storia-english/images/a/aa/5_star_Fire_Slash_%E3%80%8C%E7%99%BE%E3%80%85%E7%9B%AE%E3%81%AE%E5%B9%BD%E9%AC%BC%E3%80%8D%E3%81%A8%E3%81%A9%E3%82%81%E3%81%8D_small_icon.png/revision/latest?cb=20170508082739', 'Traditional'),
 ('Trust', 'Fire', 'Gun','5', 'https://vignette.wikia.nocookie.net/merc-storia-english/images/6/62/5_star_Fire_Gun_%E3%80%8C%E8%96%AB%E7%88%B6%E3%81%AE%E7%84%94%E5%BD%B1%E3%80%8D%E3%83%88%E3%83%A9%E3%82%B9%E3%83%88_small_icon.png/revision/latest?cb=20170508082830', 'Snow'),
 ('Entra', 'Fire', 'Magic','5', 'https://vignette.wikia.nocookie.net/merc-storia-english/images/b/b6/5_star_Fire_Magic_%E3%80%8C%E9%85%A9%E9%85%8A%E3%81%AA%E3%81%8D%E9%85%92%E5%AE%B4%E3%80%8D%E3%82%A8%E3%83%B3%E3%83%88%E3%83%A9_small_icon.png/revision/latest?cb=20171203083636', 'Ethnic'),

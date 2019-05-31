@@ -8,8 +8,11 @@
 		<input type="submit" name="submit" value="Create Account" />
 		<input type="submit" name="submit" value="Change Password" />
 		<input type="submit" name="submit" value="Close Account" />
+		
 	</form>
+	
 
+	
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
@@ -30,3 +33,4 @@ $(function() {
 	});
 });
 </script>
+    <button class="logout" onClick="window.location = 'TestWebProj.php'">Back</button>
