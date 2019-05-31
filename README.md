@@ -12,8 +12,14 @@ Web Application Development end term project
 
 `AccountAction` files: work with `AccountManager` files
 
+`UnitAction.php`: works with `UnitManager.php`
+
+`UnitQuery.php`: works with `UnitSorter.php`
+
 
 * `login.php`: for logging in
 * `AccountManager.php`: Insert/Modify/Delete accounts
 * `AccountManagerAdmin.php`: Admin permissions required
+* `UnitSorter.php`: Search units
+* `UnitManager.php`: Insert/Modify/Delete units
 * `*.sql` files: for generating the database
