@@ -49,10 +49,16 @@
 		
 		margin-left: -37px;
 	}
+    .ADC{
+        onClick="window.location = 'logout.php'";
+    }
     </style>
     
   </head>
-  <body style="background:url(https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.15752-9/59178090_446544552767463_574694408348237824_n.png?_nc_cat=110&_nc_oc=AQn-96yNefjkXcSCAwgAIfFthNG_LlAeEs58AINq-dDRVWEw0H5UbMbcJ7ZQ_QqCtTc&_nc_ht=scontent.fsgn5-3.fna&oh=b7ff2d1c4e781782e263a0ffa660d56e&oe=5D657526); width: : 100%">
+  <body style="height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;background-image:  url(https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.15752-9/59178090_446544552767463_574694408348237824_n.png?_nc_cat=110&_nc_oc=AQn-96yNefjkXcSCAwgAIfFthNG_LlAeEs58AINq-dDRVWEw0H5UbMbcJ7ZQ_QqCtTc&_nc_ht=scontent.fsgn5-3.fna&oh=b7ff2d1c4e781782e263a0ffa660d56e&oe=5D657526); width: : 100%">
     
     <div class="container">
       
@@ -68,13 +74,34 @@
                     header("location: TestWebProj.php");
                 }
                 echo "Hello " . $_SESSION['name'];
+                
                 ?>
 
                 <button class="logout" onClick="window.location = 'logout.php'">Logout</button>
+                
                 <br>                <br>
                 <br>
-                <br>
-                
+                <?php
+                include("../class/DataProviderPDO.php");
+$list = DataProvider_PDO::ExecuteQuery("select permission from account where username = '{$_SESSION["name"]}' ");
+while($row = $list -> fetch()) 
+{
+    $data = <<<EOD
+{$row['permission']} 
+
+EOD;
+
+    if ($data[0]==1){echo "<button  id='ADC'>ADC</button>";}
+    else {echo"<br>";}
+}
+?>
+<script>
+$(document).ready(function(){
+                $("#ADC").click(function(e){
+                    window.location = '../AccountManagerAdmin.php'
+                });
+            });
+</script>
 
             </div>
             
