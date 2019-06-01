@@ -52,7 +52,10 @@
     </style>
     
   </head>
-  <body style="background:url(https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.15752-9/59178090_446544552767463_574694408348237824_n.png?_nc_cat=110&_nc_oc=AQn-96yNefjkXcSCAwgAIfFthNG_LlAeEs58AINq-dDRVWEw0H5UbMbcJ7ZQ_QqCtTc&_nc_ht=scontent.fsgn5-3.fna&oh=b7ff2d1c4e781782e263a0ffa660d56e&oe=5D657526); width: : 100%">
+  <body style="height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;background-image:  url(https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.15752-9/59178090_446544552767463_574694408348237824_n.png?_nc_cat=110&_nc_oc=AQn-96yNefjkXcSCAwgAIfFthNG_LlAeEs58AINq-dDRVWEw0H5UbMbcJ7ZQ_QqCtTc&_nc_ht=scontent.fsgn5-3.fna&oh=b7ff2d1c4e781782e263a0ffa660d56e&oe=5D657526); width:  100%">
     
     <div class="container">
       
@@ -157,7 +160,7 @@
 </nav>
 
  <div class="col-md-10 red">
-   <div style="margin: 1.25% 2.5% 5% 0px;padding:10px 10px 10px 10px;height: 95%;" class="col-md-12 white"> 
+   <div style="margin: 1.25% 2.5% 5% 0px;padding:10px 10px 10px 10px;height: 98%;" class="col-md-12 white"> 
     	 <script>
     	 	$(document).ready(function(){
     	 		$("#runeAl").click(function(e){
