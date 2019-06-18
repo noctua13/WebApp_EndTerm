@@ -1,4 +1,4 @@
-<a href="../AccountManager.php"> Trở về </a>
+<a href="../AccountManager.php"> Back </a>
 <br />
 <?php
 include("../class/DataProviderPDO.php");
@@ -18,7 +18,7 @@ if (isset($_POST['submit']))
 	$pass = $_POST['txtPass'];
 	$repass = $_POST['txtRePass'];
 	
-	if (($action == "Create Account" || $action == "Close Account") && $pass != $repass) die("Mật khẩu không trùng khớp!");
+	if (($action == "Create Account" || $action == "Close Account") && $pass != $repass) die("Password miss match!");
 	
 	switch ($action)
 	{
@@ -28,25 +28,25 @@ insert into	account (username, password, permission) values ("{$user}", "{$pass}
 EOD;
 			if (DataProvider_PDO::ExecuteQuery($sql))
 			{
-				echo "Thêm tài khoản thành công!";
+				echo "Account created successfully!";
 			}
 			else 
 			{
-				echo "Lỗi xảy ra khi thêm tài khoản!";
+				echo "An error occured when creating an account.";
 			}
 		break;
 		case "Change Password":
-			if (!isExist($user, $pass)) die("Sai thông tin tài khoản!");
+			if (!isExist($user, $pass)) die("Username or password is incorrect!");
 			$sql = <<<EOD
 update account set password = "{$repass}" where username = "{$user}"			
 EOD;
 			if (DataProvider_PDO::ExecuteQuery($sql))
 			{
-				echo "Sửa mật khẩu thành công!";
+				echo "Password changed successfully!";
 			}
 			else 
 			{
-				echo "Lỗi xảy ra khi sửa mật khẩu!";
+				echo "An error occured when trying to change am account's password.";
 			}
 		break;
 		case "Close Account":
@@ -55,11 +55,11 @@ delete from account where username = "{$_POST['txtUser']}" and password = "{$_PO
 EOD;
 			if (DataProvider_PDO::ExecuteQuery($sql))
 			{
-				echo "Đóng tài khoản thành công!";
+				echo "Close account successfully!";
 			}
 			else 
 			{
-				echo "Lỗi xảy ra khi đóng tài khoản!";
+				echo "An error occured when attemping to close an account.";
 			}
 		break;
 	}
