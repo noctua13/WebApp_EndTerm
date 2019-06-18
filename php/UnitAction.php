@@ -14,9 +14,9 @@ switch($_POST['submit'])
 		$sql = "insert into unit (Name, Element, Weapon, Rarity, Country, Icon) values ('{$name}', '${element}', '{$weapon}', '{$rarity}', '{$country}', '{$icon}')";
 		if (DataProvider_PDO::ExecuteQuery($sql))
 		{
-			echo "Thêm thành công!";
+			echo "Added a record successfully!";
 		}
-		else echo "Lôi thêm!";
+		else echo "An error occured.";
 	break;
 	case "Edit":
 		$sql = "update unit set Element = '{$element}', Weapon = '{$weapon}', Rarity = '{$rarity}', Country = '{$country}' ";
@@ -24,17 +24,17 @@ switch($_POST['submit'])
 		$sql .= " where Name = '{$name}' ";
 		if (DataProvider_PDO::ExecuteQuery($sql))
 		{
-			echo "Sửa thành công!";
+			echo "Edit a record successfully!";
 		}
-		else echo "Lôi sửa!";
+		else echo "An error occured.";
 	break;
 	case "Delete":
 		$sql = "delete from unit where Name = '{$name}'";
 		if (DataProvider_PDO::ExecuteQuery($sql))
 		{
-			echo "Xóa thành công!";
+			echo "Delete a record successfully!";
 		}
-		else echo "Lôi xóa!";
+		else echo "An error occured.";
 	break;
 }
 }
