@@ -8,7 +8,7 @@ Web Application Development end term project
 
 * ./php: contains scripts to run most of the thing
 
-`home/php` amd `logout.php`: work with `login.php`
+`logout.php`
 
 `AccountAction` files: work with `AccountManager` files
 
@@ -22,4 +22,7 @@ Web Application Development end term project
 * `AccountManagerAdmin.php`: Admin permissions required
 * `UnitSorter.php`: Search units
 * `UnitManager.php`: Insert/Modify/Delete units
+* `Welcome.php`: Simple homepage
+* `UnitList.php`: Simple fetching records from the database
+* `Rune.php`: Simple article designing
 * `*.sql` files: for generating the database
