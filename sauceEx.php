@@ -216,10 +216,10 @@ $('.tabs a').click(function(e){
     	</div>
         <div class="tabcontent">
         	<b style="font-size: 30">Parameter</b> 
-        	<div>Parameter: Runes that increase stats (HP,ATK,ATK rate,Movement speed,Toughness) according to Runes' name.</div>
-        	<div>Elemental: Runes that multiplies damage that unit deal to a single element by (100+[rune's mana])% times according to Runes' name.</div>
-        	<div>Guard: Runes that increases defense of unit to a single element by [rune's mana]% according to Runes' name.</div>
-        	<div>General Guard: Runes that increases defense of unit to a all elements by [rune's mana/2]%.</div>
+        	<div><b>Parameter</b>: Runes that increase stats (HP,ATK,ATK rate,Movement speed,Toughness) according to Runes' name.</div>
+        	<div><b>Elemental</b>: Runes that multiplies damage that unit deal to a single element by (100+[rune's mana])% times according to Runes' name.</div>
+        	<div><b>Guard</b>: Runes that increases defense of unit to a single element by [rune's mana]% according to Runes' name.</div>
+        	<div><b>General Guard</b>: Runes that increases defense of unit to a all elements by [rune's mana/2]%.</div>
         	<b>Insert unit stat and rune's mana below for calculation result(except General Guard):</b>
         	<div>
         		
@@ -245,13 +245,13 @@ $('.tabs a').click(function(e){
 						var gt = $(this).html();
 						var a = $("#txtA").val().trim();
 						if (a.length == 0){
-							alert("!!! ?A");
+							alert("Please insert your Rune's mana");
 							$("#txtA").focus();
 							return;
 						}
 						var b = $("#txtB").val().trim();
 							if (b.length == 0){
-							alert("!!! ?B");
+							alert("Please insert your Unit's stat");
 							$("#txtB").focus();
 							return;
 						}
@@ -264,8 +264,8 @@ $('.tabs a').click(function(e){
         
         <div class="tabcontent">
         	<b style="font-size: 30">Special Effect 1</b> 
-         	<div>Knight Rune: Decreases the damage dealt towards unit(s) behind it. May stack multiple times with other Knight Runes</div>
-        	<div>Berserk Rune: Increases damage according to HP lost.</div>
+         	<div><b>Knight Rune</b>: Decreases the damage dealt towards unit(s) behind it. May stack multiple times with other Knight Runes</div>
+        	<div><b>Berserk Rune</b>: Increases damage according to HP lost.</div>
         	<div>
         	<input style="width:100px ;height: 20px ;margin-top: 3px;margin-left: 200px; position: absolute;" type="number" id="txtAa" step="0.001" min="5.000" max="35.000"><b>Rune mana</b><br>
 				
@@ -277,7 +277,7 @@ $('.tabs a').click(function(e){
 				
 				<div id="txtKQa"></div>
 
-        		<div>Healing Rune: Healing rate when the unit retreats/pulls back will be equal to (base healing rate: 2% of unit's max HP)x0.4x[mana].</div>
+        		<div><b>Healing Rune</b>: Healing rate when the unit retreats/pulls back will be equal to (base healing rate: 2% of unit's max HP)x0.4x[mana].</div>
 				
 				<input style="width:100px ;height: 20px ;margin-top: 3px;margin-left: 200px; position: absolute;" type="number" id="txtAb" step="0.001" min="5.000" max="35.000"><b>Rune mana</b><br>
 				
@@ -354,9 +354,9 @@ $('.tabs a').click(function(e){
         	<div class="tabcontent">
         	<b style="font-size: 30">Special Effect 2</b> 
         	<b>We don't know exactly about these runes' formula(s) so let's skip these ones.</b>
-         	<div>Dodge Rune: Gives a chance to dodge attack(s) based on unit's speed. We don't know exactly about this rune formula so let's skip this one.</div>
-        	<div>Endure Rune: Gives a chance to withstand high damage (higher than unit's HP),until 2 or 1 HP left based on unit's Grit.</div>
-			<div>Guts Rune: Increases units' starting guts when deployed into battle. Guts increase is randomized between 1~5</div>
+         	<div><b>Dodge Rune:</b> Gives a chance to dodge attack(s) based on unit's speed. We don't know exactly about this rune formula so let's skip this one.</div>
+        	<div><b>Endure Rune</b>: Gives a chance to withstand high damage (higher than unit's HP),until 2 or 1 HP left based on unit's Grit.</div>
+			<div><b>Guts Rune</b>: Increases units' starting guts when deployed into battle. Guts increase is randomized between 1~5</div>
 				
 				
      	</div>
