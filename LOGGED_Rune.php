@@ -102,35 +102,22 @@ else
 		<!-- Container -->
 		<p class="text-dark" style="font-size:30">Runes</p>
 		<hr />
-		<p class="text-dark">
-		<b>Runes</b> are items that can be equipped by units to increase their specific stats.
-    	<ul class="text-dark">
-    	<li>Runes can be obtained from quests, medal exchange shop, inner, and occasionally sent as a gift from Merc Storia.</li>
-    	<li>Their maximum mana value is 35.000.</li>
-    	<li>A rune's effect depends on its mana value.</li>
-    	<li>Rune set takes important role to increase units' effectiveness in battles and events.</li>
-    	<li>According to party tactics and stage's restriction, Player can combine Rune sets into units in the most efective ways.</li>
-    	<li>The most recomended way to get runes is from stages and event stages. Runes with mana from 5.000 to 27.000 drop from any stage so we don't recomend exchanging runes from exchange shops.</li>
-    	<li>Runes which mana are from 27.000 to 30.000 can be upgraded by Enhancer or another rune which mana are from 27.000 to 30.000.</li> 
-		<li>Runes which mana are from 30.000 to 35.000 can be upgraded by Enhancer(check Enhancer tab for more information) and another rune which mana are from 30.000 to 35.000 though we don't recomend this.</li>
-		</ul>
-		</p>
-		<p class="text-dark" style="font-size:25" id=""> Parameter</p>
-		<p class="text-dark">
-		Runes that increase stats (HP,ATK,ATK rate,Movement speed,Toughness) according to Runes' name.
-        	<ul class="text-dark"><li>Elemental: Runes that multiplies damage that unit deal to a single element by (100+[rune's mana])% times according to Runes' name.</li>
-        	<li>Guard: Runes that increases defense of unit to a single element by [rune's mana]% according to Runes' name.</li>
-        	<li>General Guard: Runes that increases defense of unit to a all elements by [rune's mana/2]%.</li>
-		</ul>
-		</p>
-		<p class="text-dark" style="font-size:25" id=""> Special Effect </p>
-			<p class="text-dark"><i>Under construction.</i></p>
-		<p class="text-dark" style="font-size:25" id=""> Weapon </p>
-			<p class="text-dark"><i>Under construction.</i></p>
-		<p class="text-dark" style="font-size:25" id=""> Synthesized Runes</p>
-			<p class="text-dark"><i>Under construction.</i></p>
-		<p class="text-dark" style="font-size:25" id=""> Collector </p>
-			<p class="text-dark"><i>Under construction.</i></p>
+		<script>
+    	 	
+    	 			$.ajax({
+    	 				type:"POST",
+    	 				url:"sauceEx.php",
+    	 				success:function(result,status,xhr){
+    	 					$("#runephp").html(result);
+    	 				},
+    	 				error:function(xhr,status,error){
+    	 					$("#runephp").html(error);
+    	 				}
+    	 			})
+    	 		
+
+    	 </script>
+    	 <p id="runephp"></p>
 		</div>
 	</div>
 </div>

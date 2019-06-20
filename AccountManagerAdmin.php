@@ -18,7 +18,22 @@
     <title>Special:Account Manager | Merc Storia Wiki</title>
 	
 	<link rel="stylesheet" type="text/css" href="assets/Decoration.css" />
-	
+	<script>
+	$(function() { 
+		$(".btnAccountManager").click(function() {
+			location.href = "AccountManagerAdmin.php";
+		});
+		$(".btnLogout").click(function() {
+			location.href = "php/logout.php";
+		});
+		$(".btnLogin").click(function() {
+			location.href = "login.php";
+		});
+		$(".btnSignUp").click(function() {
+			location.href = "AccountManager.php";
+		});
+	});
+</script>
 </head>
 <body style="height: 100%; 
   background-position: center;
@@ -95,11 +110,13 @@ EOD;
 		$(".btnXoa").click(function() {
 			var user = $(this).attr("data-id");
 			var tr = $(this).closest("tr");
-			alert("Successfully deleted account: " + user);
+			
 			$.ajax({
 				url: "php/AccountActionAdmin.php",
 				data: {id: user, type: "DELETE"}
 			});
+			if(!alert("Successfully deleted account: " + user)){window.location.reload();}
+
 		});
 		$(".btnSet").click(function() {
 			var user = $(this).attr("data-id");
@@ -109,24 +126,28 @@ EOD;
 				url: "php/AccountActionAdmin.php",
 				data: {id: user, type: "RESET"}
 			});
+			
+
 		});
 		$(".btnRights").click(function() {
 			var user = $(this).attr("data-id");
 			var tr = $(this).closest("tr");
-			alert("Promoted moderator rights for: " + user);
+			
 			$.ajax({
 				url: "php/AccountActionAdmin.php",
 				data: {id: user, type: "RIGHTS"}
 			});
+			if(!alert("Promoted moderator rights for: " + user)){window.location.reload();}
 		});
 		$(".btnRemove").click(function() {
 			var user = $(this).attr("data-id");
 			var tr = $(this).closest("tr");
-			alert("Demoted moderator rights for: " + user);
+			
 			$.ajax({
 				url: "php/AccountActionAdmin.php",
 				data: {id: user, type: "REMOVE"}
 			});
+			if(!alert("Demoted moderator rights for: " + user)){window.location.reload();}
 		});
 	});
 </script>
