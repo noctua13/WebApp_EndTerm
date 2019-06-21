@@ -13,7 +13,7 @@
          padding-top: 10px;
       }
       .white{
-        color: red;
+        color: black;
         background-color: white; text-align: left;align-items: center;
       }
       .lightgrey{
@@ -38,3 +38,4 @@
     .ADC{
         onClick="window.location = 'logout.php'";
     }
+

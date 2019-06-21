@@ -103,7 +103,9 @@ else
 			<p class="text-dark" style="font-size:30">Welcome to the Merc Storia Wiki.</p>
 			<p class="text-dark"> The Wiki with 3 articles that anyone can edit! </p>
 			<hr />
-
+			<a ><image style="width: 33%;" src="./assets/yIEypXX1.png" /></a><br>
+			<a ><image style="width: 33%;" src="./assets/D8hINI_UIAER6ao.jpg" /></a><br>
+			<a ><image style="width: 33%;" src="./assets/D9FLUFWUwAE_LhE.png" /></a><br>
 		</div>
 	</div>
 </div>
