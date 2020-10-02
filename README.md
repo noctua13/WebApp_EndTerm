@@ -1,6 +1,10 @@
 # WebApp_EndTerm
 Web Application Development end term project
 
+A detailed description can be found in the `projectReport.pdf` file
+
+Below are the descriptions of many of the files used in the app:
+
 * ./assets: contains image resources
 * ./class: contains required resources
 
